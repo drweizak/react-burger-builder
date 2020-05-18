@@ -11,7 +11,7 @@ const initialState = {
 
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.AUTH_REQUEST: return updateObject(state, { error: null, loading: true });
+        case actionTypes.AUTH_START: return updateObject(state, { error: null, loading: true });
         case actionTypes.AUTH_SUCCESS: return updateObject(state, {
             token: action.payload.idToken,
             userId: action.payload.localId,
